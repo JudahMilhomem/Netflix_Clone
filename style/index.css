@@ -61,8 +61,6 @@ a {
   flex-direction: column;
   justify-content: center;
   padding: 0 50px;
-  
-  /* Um overlay escuro para o texto ficar legível */
   box-shadow: inset 100px 0 250px rgba(0,0,0,0.9);
 }
 
