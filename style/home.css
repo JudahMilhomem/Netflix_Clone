@@ -1,0 +1,206 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  overflow-x: hidden; 
+}
+
+a {
+  text-decoration: none;
+  color: #e5e5e5;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 85vh;
+  background-image: url('../public/images/gachiakuta_banner.png');
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+
+  background-image: linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 80%),
+                    linear-gradient(to top, #141414 0%, rgba(0,0,0,0) 20%),
+                    url('../public/images/gachiakuta_banner.png');
+}
+
+.hero-content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+/* Informações extras da série */
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.match { color: #46d369; }
+.age-rating { border: 1px solid #fff; padding: 0 5px; }
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover { transform: scale(1.05); }
+
+.btn-primary { background-color: #fff; color: #000; }
+.btn-primary:hover { background-color: rgba(255,255,255,0.7); }
+
+.btn-secondary { background-color: rgba(109,109,110,0.7); color: #fff; }
+.btn-secondary:hover { background-color: rgba(109,109,110,0.4); }
+
+/* ================= CATÁLOGO E CARDS ================= */
+.catalogo {
+  padding: 0 50px;
+  margin-top: -100px;
+  position: relative;
+  z-index: 5;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #e5e5e5;
+}
+
+.cards-row {
+  display: flex;
+  gap: 10px;
+
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+/* Esconde a barra de rolagem */
+.cards-row::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 auto; /* Não deixa "esmagar" os cards na tela */
+  width: 250px;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+/* Efeito de Zoom (Desafio Extra 1) */
+.card:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  padding: 50px;
+  margin-top: 50px;
+  color: #737373;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-links a { color: #737373; font-size: 0.9rem; }
+.footer-links a:hover { text-decoration: underline; }
