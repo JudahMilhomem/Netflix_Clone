@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix - Detalhes do Filme</title>
+  <link rel="stylesheet" href="../style/details.css">
+</head>
+
+
+
+<body>
+  <!-- Header simplificado -->
+  <header class="simple-header">
+    <a href="home.html" class="logo">NETFLIX</a>
+    <a href="profiles.html">
+      <img src="../public/images/profiles/knight.jpg" alt="Avatar" class="user-avatar">
+    </a>
+  </header>
+
+
+  <!-- Banner de fundo e Informações -->
+  <main class="details-container">
+    <!-- Imagem de fundo com gradiente -->
+    <div class="banner-bg"></div>
+
+    <!-- Conteúdo principal -->
+    <div class="movie-info">
+      <!-- Miniatura -->
+      <img src="../public/images/gear-5_luffy.png" alt="Pôster do Filme" class="poster">
+
+      <div class="info-text">
+        <h1>A Volta Dos Que Não Foram</h1>
+        
+        <div class="meta-data">
+          <span class="year">2026</span>
+          <span class="duration no-duration">0 Temporadas</span>
+          <span class="age">16</span>
+          <span class="genre">Aclamados Pela Mídia</span>
+        </div>
+
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia sapiente molestiae, quam voluptas expedita nulla hic adipisci in harum quas!
+        </p>
+
+        <div class="cast-crew">
+          <p><strong>Diretor:</strong>Judah Milhomem</p>
+          <p><strong>Elenco:</strong>Tua Mãe, Teu Pai</p>
+        </div>
+
+        <!-- Botões alinhados com Flexbox -->
+        <div class="action-buttons">
+          <a href="watch.html" class="btn btn-primary">▶ Assistir</a>
+          <a href="#" class="btn btn-secondary">+ Minha Lista</a>
+          <a href="home.html" class="btn btn-secondary">← Voltar</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Seção de conteúdos semelhantes -->
+  <section class="similar-content">
+    <h2>Você também pode gostar</h2>
+    <div class="cards-row">
+      <!-- Card 1 -->
+      <a href="#" class="card">
+        <img src="../public/images/movies/recommendations/HxH.jpg" alt="Semelhante 1">
+      </a>
+      <!-- Card 2 -->
+      <a href="#" class="card">
+        <img src="../public/images/movies/recommendations/AoT.jpg" alt="Semelhante 2">
+      </a>
+      <!-- Card 3 -->
+      <a href="#" class="card">
+        <img src="../public/images/movies/recommendations/haikyuu.jpg" alt="Semelhante 3">
+      </a>
+    </div>
+  </section>
+</body>
+</html>
