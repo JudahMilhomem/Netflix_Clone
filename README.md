@@ -1,6 +1,8 @@
 # Lista To Do
+- Teste de referência: index.html movido (*Vercel fix*); *
 - Ajustar foto do Avatar no canto superior (todas as páginas); ** dinâmico?
-- Melhorar o HTML (substituir divs, etc.)
+- Melhorar o HTML (substituir divs, etc.);
+- **Fix:** Botões se sobrepondo e cards "sumindo" conforme a tela diminui em alguns casos
 - Landing:
     - Adicionar imagem
 - Perfis:
