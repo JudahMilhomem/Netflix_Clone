@@ -61,37 +61,66 @@
     <!-- Categoria: Em Alta -->
     <section class="category highlights">
       <h2>Em Alta</h2>
-      <div class="cards-row">
-        <!-- Card 1  -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/baby_driver.jpg" alt="Pôster Filme 1">
-          <p>Em Ritmo de Fuga</p>
-        </a>
-        <!-- Card 2 -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/catch_me_if_you_can.png" alt="Pôster Filme 2">
-          <p>Prenda-me se for capaz</p>
-        </a>
-        <!-- Card 3 -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/os_infiltrados.png" alt="Pôster Filme 3">
-          <p>Os Infiltrados</p>
-        </a>
-        <!-- Card 4 -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/obsession.jpg" alt="Pôster Filme 4">
-          <p>Obsessão</p>
-        </a>
-        <!-- Card 5 -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/endgame.png" alt="Pôster Filme 5">
-          <p>Vingadores: Ultimato</p>
-        </a>
-        <!-- Card 6 -->
-        <a href="details.html" class="card">
-          <img src="../public/images/movies/spider_man_mm.jpg" alt="Pôster Filme 6">
-          <p>Miranha no Miranhaverso Pt. I</p>
-        </a>
+      
+      <!-- Container Wrapper para posicionar as setas -->
+      <div class="carousel-wrapper">
+        
+        <!-- Seta Esquerda (Aponta para o início) -->
+        <a href="#row-start" class="slider-arrow left-arrow">❮</a>
+
+        <div class="cards-row">
+          <!-- Card 1 (ID do início da fileira) -->
+          <a href="details.html" class="card" id="row-start">
+            <img src="../public/images/movies/baby_driver.jpg" alt="Pôster Filme 1">
+            <p>Em Ritmo de Fuga</p>
+          </a>
+          
+          <!-- Card 2 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/movies/catch_me_if_you_can.png" alt="Pôster Filme 2">
+            <p>Prenda-me se for capaz</p>
+          </a>
+          
+          <!-- Card 3 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/movies/os_infiltrados.png" alt="Pôster Filme 3">
+            <p>Os Infiltrados</p>
+          </a>
+          
+          <!-- Card 4 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/movies/obsession.jpg" alt="Pôster Filme 4">
+            <p>Obsessão</p>
+          </a>
+          
+          <!-- Card 5 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/movies/endgame.png" alt="Pôster Filme 5">
+            <p>Vingadores: Ultimato</p>
+          </a>
+          
+          <!-- Card 6 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/movies/spider_man_mm.jpg" alt="Pôster Filme 6">
+            <p>Miranha no Miranhaverso Pt. I</p>
+          </a>
+          
+          <!-- Card 7 -->
+          <a href="details.html" class="card">
+            <img src="../public/images/card_placeholder.png" alt="Pôster Filme 7">
+            <p>Em breve</p>
+          </a>
+          
+          <!-- Card 8 (ID do fim da fileira) -->
+          <a href="details.html" class="card" id="row-end">
+            <img src="../public/images/card_placeholder.png" alt="Pôster Filme 8">
+            <p>Em breve</p>
+          </a>
+        </div>
+
+        <!-- Seta Direita (Aponta para o fim) -->
+        <a href="#row-end" class="slider-arrow right-arrow">❯</a>
+        
       </div>
     </section>
     <!-- Categoria: Continuar Assistindo -->
