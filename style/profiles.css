@@ -95,3 +95,19 @@ h1 {
   color: #fff;
   border-color: #fff;
 }
+
+/* ================= RESPONSIVIDADE ================= */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profiles-container {
+    gap: 1.5rem;
+  }
+}
