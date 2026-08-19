@@ -1,0 +1,203 @@
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+
+  overflow: hidden; 
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ================= CONTAINER DO PLAYER ================= */
+.fullscreen-player {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  background-image: url('../public/images/playing.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* ================= HEADER ================= */
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+/* ================= BOTÃO PULAR ABERTURA ================= */
+.skip-intro {
+  position: absolute;
+  bottom: 120px;
+  right: 40px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  z-index: 10;
+}
+
+.skip-intro:hover {
+  background-color: #e6e6e6;
+  transform: scale(1.05);
+}
+
+/* ================= CONTROLES INFERIORES ================= */
+.bottom-controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 40px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 10;
+}
+
+/* --- Barra de Progresso --- */
+.timeline-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.progress-container {
+  flex-grow: 1;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  transition: height 0.1s;
+}
+
+.progress-container:hover .progress-bar {
+  height: 6px;
+}
+
+.progress-filled {
+  height: 100%;
+  background-color: #e50914;
+  position: relative;
+}
+
+.progress-filled::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #e50914;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.progress-container:hover .progress-filled::after {
+  opacity: 1;
+}
+
+.time-remaining {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #e5e5e5;
+}
+
+/* --- Botões e Título --- */
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.control-group.left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.control-group.right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.control-group.center {
+  flex: 2;
+  justify-content: center;
+  text-align: center;
+}
+
+.control-group.center h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+/* ================= ÍCONES DOS BOTÕES (SVGs) ================= */
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, color 0.2s;
+  padding: 5px;
+}
+
+.icon-btn svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.2s;
+}
+
+.icon-btn:hover {
+  color: #b3b3b3; 
+  transform: scale(1.15);
+}
+
+.play-btn svg {
+  width: 38px;
+  height: 38px;
+}
