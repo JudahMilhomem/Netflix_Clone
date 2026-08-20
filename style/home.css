@@ -148,28 +148,40 @@ a {
   color: #e5e5e5;
 }
 
+/* ================= BARRA DE ROLAGEM CUSTOMIZADA ================= */
 .cards-row {
   display: flex;
   gap: 10px;
-
-  /* efeito Carrossel */
   overflow-x: auto;
   scroll-snap-type: x mandatory; 
-  -webkit-overflow-scrolling: touch; /* rolagem */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 15px; 
 }
 
-/* Esconde a barra de rolagem */
 .cards-row::-webkit-scrollbar {
-  display: none;
+  height: 8px;
+}
+
+.cards-row::-webkit-scrollbar-track {
+  background: #141414; 
+  border-radius: 4px;
+}
+
+.cards-row::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 4px;
+}
+
+/* Efeito ao passar o mouse na barra */
+.cards-row::-webkit-scrollbar-thumb:hover {
+  background: #e50914; 
 }
 
 .card {
-  flex: 0 0 250px; /* Tamanho base para Desktop: 250px */ 
-  scroll-snap-align: start; /* "trava" */
+  flex: 0 0 250px; 
+  scroll-snap-align: start; 
   transition: transform 0.3s;
   position: relative;
-
-  scroll-margin-top: 40vh; /* !"down-scroll quick fix" */
 }
 
 .card img {
@@ -187,60 +199,39 @@ a {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
-/* Efeito de Zoom (Desafio Extra 1) */
 .card:hover {
   transform: scale(1.1);
   z-index: 2;
 }
 
-/* ================= CARROSSEL COM SETAS ================= */
-.carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
+/* ================= BARRA DE ROLAGEM CUSTOMIZADA ================= */
 .cards-row {
-  scroll-behavior: smooth;
-  width: 100%;
-}
-
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 2rem;
-  padding: 15px 10px;
-  text-decoration: none;
-  z-index: 10;
-  opacity: 0;
-  transition: opacity 0.3s ease, background 0.3s ease;
-  height: 140px; /* Mesma altura do card  */
   display: flex;
-  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+  
+
+  padding-bottom: 15px; 
 }
 
-.slider-arrow:hover {
-  background: rgba(0, 0, 0, 0.9);
-  font-size: 2.5rem;
+.cards-row::-webkit-scrollbar {
+  height: 8px;
 }
 
-.carousel-wrapper:hover .slider-arrow {
-  opacity: 1;
+.cards-row::-webkit-scrollbar-track {
+  background: #141414; 
+  border-radius: 4px;
 }
 
-.left-arrow {
-  left: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+.cards-row::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 4px;
 }
 
-.right-arrow {
-  right: 0;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+.cards-row::-webkit-scrollbar-thumb:hover {
+  background: #e50914; 
 }
 
 /* ================= FOOTER ================= */
